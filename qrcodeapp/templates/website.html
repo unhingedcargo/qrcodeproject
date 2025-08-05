@@ -3,21 +3,24 @@
     <div class="card">
   <img src="{% static 'img/website-qr.png' %}" class="card-img-top" alt="..." id="img-web" >
   <div class="card-body">
+    
     <div class="mb-3 mx-4">
         <div class="input-group mt-4">
-            <span class="input-group-text" id="basic-addon3">Enter your Website</span>
-            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" placeholder="www.yourwebsite.com">
+            <span class="input-group-text" id="basic-addon3">Your Website</span>
+            <input type="text" class="form-control" id="website-url" aria-describedby="basic-addon3 basic-addon4" placeholder="www.yourwebsite.com">
         </div>
     </div>
   </div>
-  <button type="button" class="btn btn-success btn-lg mb-2 mx-auto"data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Create QR</button>
+  <button type="button" id="createqr" class="btn btn-success btn-lg mb-2 mx-auto" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Create QR</button>
   
     <div class="collapse mx-auto mb-4 justify-content-center" id="collapseExample" style="width: 40%;">
-        <div class="card card-body">
-            <img src="{% static 'img/location.png' %}" alt="">
+        <div id="website-qr" class="card card-body">
+            
         </div>
+        <a class="btn btn-success" onclick="downloadQR()">Download</a>
     </div>
 
 </div>
 
 </div>
+<script src="{% static 'js/scriptWebsite.js' %}"></script>
