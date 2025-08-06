@@ -17,7 +17,7 @@
 		<div id="body">
 			{% include "navbar.html" %}
 			<div class="container text-center">
-			<h3 class="mt-5"><strong>Create your QR CODE here</strong></h3>
+			<h3 class="mt-5"><strong>Create your FREE QR CODE here</strong></h3>
 			<div class="card mt-5" style="width: 100%">
 			<div class="card-body">
 				
@@ -25,7 +25,7 @@
 
 			<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
 				<h4 class="mx-3">QR Code Type : </h4>
-				<input type="radio" class="btn-check" name="btnradio" id="website-check" autocomplete="off" checked>
+				<input type="radio" class="btn-check" name="btnradio" id="website-check" autocomplete="off">
 				<label class="btn btn-outline-primary" for="website-check">WEBSITE</label>
 
 				<input type="radio" class="btn-check" name="btnradio" id="location-check" autocomplete="off">
@@ -34,14 +34,11 @@
 				<input type="radio" class="btn-check" name="btnradio" id="contact-check" autocomplete="off">
 				<label class="btn btn-outline-primary" for="contact-check">CONTACT</label>
 
-				<input type="radio" class="btn-check" name="btnradio" id="email-check" autocomplete="off">
-				<label class="btn btn-outline-primary" for="email-check">EMAIL</label>
-
-				<input type="radio" class="btn-check" name="btnradio" id="text-check" autocomplete="off">
-				<label class="btn btn-outline-primary" for="text-check">PLAIN TEXT</label>
+				<input type="radio" class="btn-check" name="btnradio" id="mail-check" autocomplete="off">
+				<label class="btn btn-outline-primary" for="mail-check">EMAIL</label>
 			</div>
 
-			<div id="website" class="mt-5">
+			<div id="website" class="mt-5" hidden>
 				{% include "website.html" %}
 			</div>
 			<div id="location" class="mt-5" hidden>
@@ -50,11 +47,8 @@
 			<div id="contact" class="mt-5" hidden>
 				{% include "contact.html" %}
 			</div>
-			<div id="email" class="mt-5" hidden>
-				{% include "email.html" %}
-			</div>
-			<div id="text" class="mt-5" hidden>
-				{% include "text.html" %}
+			<div id="mail" class="mt-5" hidden>
+				{% include "mail.html" %}
 			</div>
 
 			</div>
